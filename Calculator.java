@@ -4,4 +4,9 @@ public class Calculator
     {
         System.out.println("Hello world");
     }
+
+    public static boolean validate(String input)
+    {
+        return false;
+    }
 }

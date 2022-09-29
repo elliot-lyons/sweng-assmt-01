@@ -1,7 +1,23 @@
 public class Calculator
 {
-    public static void main(String[] args) 
+    public static int add (int a, int b){
+        return a + b;
+    }
+
+    public static int subtract (int a, int b){
+        return a - b;
+    }
+
+    public static int multiply (int a, int b){
+        return a * b;
+    }
+
+    public static int divide (int a, int b){
+        return a / b;
+    }
+
+    public static int calculate(String input)
     {
-        System.out.println("Hello world");
+        return 0;
     }
 }

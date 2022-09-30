@@ -17,6 +17,7 @@ public class CalculatorTest
         assertEquals("Testing invalid input, not a sum", false, calculator.validate("hi"));
     }
 
+
     @Test
     public void testAdd()
     {
@@ -53,5 +54,4 @@ public class CalculatorTest
 
 
     }
-
 }

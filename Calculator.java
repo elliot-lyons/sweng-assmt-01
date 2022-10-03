@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Calculator
 {
 
@@ -186,5 +184,6 @@ public class Calculator
             return 0;
         }
         return a / b;
+
     }
 }

@@ -25,12 +25,11 @@ Calculator calculator = new Calculator();
     {
         Calculator calculator = new Calculator();
         calculator.validate("2+2");
-        assertEquals("Testing calculate", 4, calculator.calculate("2+2"));
+        assertEquals("Testing calculate", 4, calculator.calculate());
         calculator.validate("77/11-9+10");
-        assertEquals("Testing calculate", 8, calculator.calculate("77/11-9+10"));
+        assertEquals("Testing calculate", 8, calculator.calculate());
         calculator.validate("8*50-350/25");
-        assertEquals("Testing calculate", 2, calculator.calculate("8*50-350/25"));
-
+        assertEquals("Testing calculate", 2, calculator.calculate());
 
     }
 
@@ -76,7 +75,6 @@ Calculator calculator = new Calculator();
 
 
      }
-=======
     // @Test
     // public void testAdd()
     // {

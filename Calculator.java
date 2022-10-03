@@ -9,8 +9,7 @@ public class Calculator
     public static void main(String[] args) 
     {
         boolean quit = false;
-        //this boolean helps with parsing string
-        boolean first = true;
+        boolean first = true;           //this boolean helps with parsing string
         
         Scanner input = new Scanner(System.in);
 
@@ -33,21 +32,10 @@ public class Calculator
 
                     else
                     {
-                        if (validate(expression))               // maybe return a list, making it easier for calculate 
-                        {                                       // implementation? Certainly make it more efficient
-                            int result = calculate(expression);
+                        if (validate(expression))                
+                        {                                       
+                            int result = calculate();
                             System.out.println("Result = " + result);
-
-
-                            while (!globalOps.isEmpty())
-                            {
-                                System.out.println(globalOps.pop());
-                            }
-
-                            while (!globalNos.isEmpty())
-                            {
-                                System.out.println(globalNos.pop());
-                            }
                         }
 
                         else
@@ -79,7 +67,6 @@ public class Calculator
         }
 
         char[] theChars = input.toCharArray();
-        // boolean hasToBeNo = true;               // next char has to be number (i.e. at start of sum or after operation)
 
         Stack<Character> localOps = new Stack<Character>();
         Stack<String> localNos = new Stack<String>();
@@ -151,29 +138,12 @@ public class Calculator
 
         return true;
     }
-    
-    public static int add (int a, int b){
-        return a + b;
-    }
 
-    public static int subtract (int a, int b){
-        return a - b;
-    }
+    /*
+     * Function for actually calculating a result. Uses other functions to do so
+     */
 
-    public static int multiply (int a, int b){
-        return a * b;
-    }
-
-    public static int divide (int a, int b){
-        if (b == 0)
-        {
-            return 0;
-        }
-        return a / b;
-    }
-
-    //@ELLIOT!!!! I think we can remove paramter here since the stacks are global??
-    public static int calculate(String input)
+    public static int calculate()
     {
         while(!globalOps.isEmpty())
         {
@@ -196,5 +166,25 @@ public class Calculator
             }
         }
         return globalNos.pop();
+    }
+    
+    public static int add (int a, int b){
+        return a + b;
+    }
+
+    public static int subtract (int a, int b){
+        return a - b;
+    }
+
+    public static int multiply (int a, int b){
+        return a * b;
+    }
+
+    public static int divide (int a, int b){
+        if (b == 0)
+        {
+            return 0;
+        }
+        return a / b;
     }
 }

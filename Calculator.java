@@ -38,7 +38,7 @@ public class Calculator
                             int result = calculate(expression);
                             System.out.println("Result = " + result);
 
-                            
+
                             while (!globalOps.isEmpty())
                             {
                                 System.out.println(globalOps.pop());
@@ -139,7 +139,6 @@ public class Calculator
         localNos.push(current);
 
 
-        //reverse the stacks by putting them on the global stacks we will use to calculate
         while (!localOps.isEmpty())
         {
             globalOps.push(localOps.pop());
